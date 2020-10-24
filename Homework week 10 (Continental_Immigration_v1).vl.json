@@ -6,63 +6,94 @@
   "width": 400,
   "height": 300,
   "title": "Immigration into each Continent by Year",
-  "selection": {
-    "continent_highlight": {
-      "type": "multi",
-      "fields": ["Continent"],
-      "bind": "legend"
-    }
-  },
-  "mark": "line",
-  "encoding": {
-    "x": {
-      "field": "Y",
-      "type": "quantitative",
-      "title": "Year",
-      "axis": {"tickCount": 6},
-      "scale": {"domain": [1990, 2020]}
-    },
-    "y": {
-      "field": "Total Immigration",
-      "type": "quantitative",
-      "scale": {"domain": [0, 90000000]},
-      "title": "Total Arrivals"
-    },
-    "color": {
-      "field": "Continent",
-      "type": "nominal",
-      "scale": {
-        "domain": [
-          "Africa",
-          "Asia",
-          "Europe",
-          "Latin America and the Caribbean",
-          "Northern America",
-          "Oceania"
-        ],
-        "range": [
-          "#e41a1c",
-          "#984ea3",
-          "#ff7f00",
-          "#a6cee3",
-          "#377eb8",
-          "#a65628"
+  "layer": [
+    {
+      "selection": {
+        "continent_highlight": {
+          "type": "multi",
+          "fields": ["Continent"],
+          "bind": "legend"
+        }
+      },
+      "mark": "line",
+      "encoding": {
+        "x": {
+          "field": "Y",
+          "type": "quantitative",
+          "title": "Year",
+          "axis": {"tickCount": 6},
+          "scale": {"domain": [1990, 2020]}
+        },
+        "y": {
+          "field": "Total Immigration",
+          "type": "quantitative",
+          "scale": {"domain": [0, 90000000]},
+          "title": "Total Arrivals"
+        },
+        "color": {
+          "field": "Continent",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Africa",
+              "Asia",
+              "Europe",
+              "Latin America and the Caribbean",
+              "Northern America",
+              "Oceania"
+            ],
+            "range": [
+              "#e41a1c",
+              "#984ea3",
+              "#ff7f00",
+              "#a6cee3",
+              "#377eb8",
+              "#a65628"
+            ]
+          }
+        },
+        "opacity": {
+          "condition": {"selection": "continent_highlight", "value": 0.6},
+          "value": 0.2
+        },
+        "tooltip": [
+          {"field": "Continent", "type": "nominal", "title": "Continent"},
+          {"field": "Y", "type": "quantitative", "title": "Year"},
+          {
+            "field": "Total Immigration",
+            "type": "quantitative",
+            "title": "Arrivals",
+            "format": ","
+          }
         ]
       }
     },
-    "opacity": {
-      "condition": {"selection": "continent_highlight", "value": 0.6},
-      "value": 0.2
-    },
-    "tooltip": [
-      {"field": "Continent", "type": "nominal", "title": "Continent"},
-      {"field": "Y", "type": "quantitative", "title": "Year"},
-      {
-        "field": "Total Immigration",
-        "type": "quantitative",
-        "title": "Arrivals"
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "Continent", "type": "nominal"},
+        "x": {"field": "Y", "type": "quantitative", "title": null},
+        "y": {
+          "field": "Total Immigration",
+          "type": "quantitative",
+          "title": null
+        },
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['Continent'] == 'Africa' && datum['Y'] == '2019'",
+            "value": 1
+          },
+          "value": 0
+        }
       }
-    ]
-  },
+    }
+  ],
   "config": {}
 }
