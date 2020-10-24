@@ -1,0 +1,89 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/PavithS/FIT3179/main/Data/Continent_immigration.csv"
+  },
+  "width": 400,
+  "height": 300,
+  "title": "Immigration into each Continent by Year",
+  "params": [
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Africa",
+          "Asia",
+          "Europe",
+          "Latin America and the Caribbean",
+          "Northern America",
+          "Oceania"
+        ],
+        "labels": [
+          "Show All",
+          "Africa",
+          "Asia",
+          "Europe",
+          "Latin America and the Caribbean",
+          "Northern America",
+          "Oceania"
+        ],
+        "name": "Continent Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+    }
+  ],
+  "mark": "line",
+  "encoding": {
+    "x": {
+      "field": "Y",
+      "type": "quantitative",
+      "title": "Year",
+      "axis": {"tickCount": 6},
+      "scale": {"domain": [1990, 2020]}
+    },
+    "y": {
+      "field": "Total Immigration",
+      "type": "quantitative",
+      "scale": {"domain": [0, 90000000]},
+      "title": "Total Arrivals"
+    },
+    "color": {
+      "field": "Continent",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Africa",
+          "Asia",
+          "Europe",
+          "Latin America and the Caribbean",
+          "Northern America",
+          "Oceania"
+        ],
+        "range": [
+          "#e41a1c",
+          "#984ea3",
+          "#ff7f00",
+          "#a6cee3",
+          "#377eb8",
+          "#a65628"
+        ]
+      }
+    },
+    "tooltip": [
+      {"field": "Continent", "type": "nominal", "title": "Continent"},
+      {"field": "Y", "type": "quantitative", "title": "Year"},
+      {
+        "field": "Total Immigration",
+        "type": "quantitative",
+        "title": "Arrivals"
+      }
+    ]
+  },
+  "config": {}
+}
