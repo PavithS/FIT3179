@@ -1,0 +1,74 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/PavithS/FIT3179/main/Data/Continent_immigration.csv"
+  },
+  "width": 400,
+  "height": 400,
+  "title": "Immigration into each Continent by Year",
+  "layer": [
+    {
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "temporal",
+          "axis": {"labelAngle": -45, "tickMinStep": 5}
+        },
+        "y": {"field": "Total Immigration", "type": "quantitative"},
+        "color": {"field": "Continent", "type": "nominal"},
+        "tooltip": [
+          {"field": "Year", "type": "temporal", "title": "Year beginning"}
+        ]
+      },
+      "layer": [
+        {"mark": "line"},
+        {
+          "selection": {
+            "label": {
+              "type": "multi",
+              "nearest": true,
+              "on": "mouseover",
+              "encodings": ["x"],
+              "empty": "none"
+            }
+          },
+          "mark": "circle",
+          "encoding": {
+            "opacity": {
+              "condition": {"selection": "label", "value": 1},
+              "value": 0.25
+            }
+          }
+        }
+      ]
+    },
+    {
+      "transform": [{"filter": {"selection": "label"}}],
+      "layer": [
+        {
+          "layer": [
+            {
+              "mark": {
+                "type": "text",
+                "align": "right",
+                "dx": -10,
+                "stroke": "white",
+                "strokeWidth": 2
+              }
+            },
+            {
+              "mark": {"type": "text", "align": "right", "dx": -10},
+              "encoding": {"color": {"field": "Continent", "type": "nominal"}}
+            }
+          ],
+          "encoding": {
+            "text": {"type": "quantitative", "field": "Total Immigration"},
+            "x": {"field": "Year", "type": "temporal"},
+            "y": {"field": "Total Immigration", "type": "quantitative"}
+          }
+        }
+      ]
+    }
+  ],
+  "config": {}
+}
