@@ -1,0 +1,70 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/PavithS/FIT3179/main/Data/Continent_immigration.csv"
+  },
+  "width": 400,
+  "height": 300,
+  "layer": [
+    {
+      "encoding": {
+        "x": {"field": "Year", "type": "temporal"},
+        "y": {"field": "Total Immigration", "type": "quantitative"},
+        "color": {"field": "Continent", "type": "nominal"}
+      },
+      "layer": [
+        {"mark": "line"},
+        {
+          "selection": {
+            "label": {
+              "type": "single",
+              "nearest": true,
+              "on": "mouseover",
+              "encodings": ["x"],
+              "empty": "none"
+            }
+          },
+          "mark": "point",
+          "encoding": {
+            "opacity": {
+              "condition": {"selection": "label", "value": 0.8},
+              "value": 0.3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "transform": [{"filter": {"selection": "label"}}],
+      "layer": [
+        {
+          "mark": {"type": "rule", "color": "gray"},
+          "encoding": {"x": {"field": "date", "type": "temporal"}}
+        },
+        {
+          "layer": [
+            {
+              "mark": {
+                "type": "text",
+                "align": "right",
+                "dx": -10,
+                "stroke": "white",
+                "strokeWidth": 2
+              }
+            },
+            {
+              "mark": {"type": "text", "align": "right", "dx": -10},
+              "encoding": {"color": {"field": "Continent", "type": "nominal"}}
+            }
+          ],
+          "encoding": {
+            "text": {"type": "quantitative", "field": "Total Immigration"},
+            "x": {"field": "Year", "type": "temporal"},
+            "y": {"field": "Total Immigration", "type": "quantitative"}
+          }
+        }
+      ]
+    }
+  ],
+  "config": {}
+}
