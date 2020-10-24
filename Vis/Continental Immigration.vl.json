@@ -3,12 +3,13 @@
   "data": {
     "url": "https://raw.githubusercontent.com/PavithS/FIT3179/main/Data/Continent_immigration.csv"
   },
-  "width": 400,
+  "width": 500,
   "height": 300,
+  "title": "Immigration into each Continent by Year",
   "layer": [
     {
       "encoding": {
-        "x": {"field": "Year", "type": "temporal"},
+        "x": {"field": "Year", "type": "temporal", "axis": {"labelAngle": -45}},
         "y": {"field": "Total Immigration", "type": "quantitative"},
         "color": {"field": "Continent", "type": "nominal"}
       },
@@ -17,18 +18,18 @@
         {
           "selection": {
             "label": {
-              "type": "single",
+              "type": "multi",
               "nearest": true,
               "on": "mouseover",
               "encodings": ["x"],
               "empty": "none"
             }
           },
-          "mark": "point",
+          "mark": "circle",
           "encoding": {
             "opacity": {
-              "condition": {"selection": "label", "value": 0.8},
-              "value": 0.3
+              "condition": {"selection": "label", "value": 1},
+              "value": 0.25
             }
           }
         }
@@ -37,10 +38,6 @@
     {
       "transform": [{"filter": {"selection": "label"}}],
       "layer": [
-        {
-          "mark": {"type": "rule", "color": "gray"},
-          "encoding": {"x": {"field": "date", "type": "temporal"}}
-        },
         {
           "layer": [
             {
