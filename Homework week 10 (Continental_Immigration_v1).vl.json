@@ -6,38 +6,13 @@
   "width": 400,
   "height": 300,
   "title": "Immigration into each Continent by Year",
-  "params": [
-    {
-      "name": "Continent_selection",
-      "bind": {
-        "input": "select",
-        "options": [
-          null,
-          "Africa",
-          "Asia",
-          "Europe",
-          "Latin America and the Caribbean",
-          "Northern America",
-          "Oceania"
-        ],
-        "labels": [
-          "Show All",
-          "Africa",
-          "Asia",
-          "Europe",
-          "Latin America and the Caribbean",
-          "Northern America",
-          "Oceania"
-        ],
-        "name": "Continent Selection: "
-      }
+  "selection": {
+    "continent_highlight": {
+      "type": "multi",
+      "fields": ["Continent"],
+      "bind": "legend"
     }
-  ],
-  "transform": [
-    {
-      "filter": "Continent_selection == null || datum.Continent == Continent_selection"
-    }
-  ],
+  },
   "mark": "line",
   "encoding": {
     "x": {
@@ -74,6 +49,10 @@
           "#a65628"
         ]
       }
+    },
+    "opacity": {
+      "condition": {"selection": "continent_highlight", "value": 0.6},
+      "value": 0.2
     },
     "tooltip": [
       {"field": "Continent", "type": "nominal", "title": "Continent"},
