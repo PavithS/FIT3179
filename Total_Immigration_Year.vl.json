@@ -64,7 +64,11 @@
             "type": "nominal",
             "title": "Country"
           },
-          {"field": "Total Immigration", "type": "quantitative"}
+          {
+            "field": "Total Immigration",
+            "type": "quantitative",
+            "format": ","
+          }
         ]
       }
     }
