@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/PavithS/FIT3179/main/Data/Development_group_year.csv"
+  },
+  "mark": "bar",
+  "width": {"step": 30},
+  "selection": {
+    "group_highlight": {
+      "type": "multi",
+      "fields": ["UN development group"],
+      "bind": "legend"
+    }
+  },
+  "encoding": {
+    "y": {
+      "aggregate": "sum",
+      "field": "Total_Immigration",
+      "title": "Immigration into UN development groups",
+      "stack": "normalize"
+    },
+    "x": {"field": "Year"},
+    "color": {
+      "field": "UN development group",
+      "scale": {"range": ["#675193", "#ca8861", "#33bbee"]}
+    },
+    "opacity": {
+      "condition": {"selection": "group_highlight", "value": 1},
+      "value": 0.2
+    },
+    "tooltip": [
+      {
+        "field": "Total_Immigration",
+        "type": "quantitative",
+        "title": "Immigration",
+        "format": ","
+      }
+    ]
+  },
+  "config": {}
+}
