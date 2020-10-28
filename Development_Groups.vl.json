@@ -16,8 +16,7 @@
     "y": {
       "aggregate": "sum",
       "field": "Total_Immigration",
-      "title": "Immigration into UN development groups",
-      "stack": "normalize"
+      "title": "Immigration into UN development groups"
     },
     "x": {"field": "Year"},
     "color": {
