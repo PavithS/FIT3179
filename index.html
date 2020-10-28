@@ -19,11 +19,16 @@
 
 <h2>Immigration into UN development groups</h2>
 <div id="vis3"></div>
+  
+<h2>Immigration into World Bank Income groups (GNI per capita)</h2>
+<div id="vis4"></div>
 
 <script type="text/javascript">
   var specVis1 = "./Total_Immigration_Year.vl.json";
   var specVis2= "./Continental_Immigration.vl.json";
   var specVis3= "./Development_Groups.vl.json";
+  var specVis4= "./Income_Groups.vl.json";
+
 
   vegaEmbed('#vis1', specVis1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -34,6 +39,10 @@
   }).catch(console.error);
   
   vegaEmbed('#vis3', specVis3).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  vegaEmbed('#vis4', specVis4).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
