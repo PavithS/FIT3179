@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/PavithS/FIT3179/main/Data/World_Bank_Income_Groups.csv"
+  },
+  "mark": "bar",
+  "width": {"step": 30},
+  "selection": {
+    "group_highlight": {
+      "type": "multi",
+      "fields": ["World Bank Income Group"],
+      "bind": "legend"
+    }
+  },
+  "encoding": {
+    "y": {
+      "aggregate": "sum",
+      "field": "Total_Immigration",
+      "title": "Immigration into World Bank Income groups",
+      "stack": "normalize"
+    },
+    "x": {"field": "Year"},
+    "color": {
+      "field": "World Bank Income Group",
+      "scale": {
+        "domain": [
+          "High-income countries",
+          "Upper-middle-income countries",
+          "Lower-middle-income countries",
+          "Low-income countries",
+          "No income group available"
+        ],
+        "range": ["#9e9e00", "#009988", "#33bbee", "#984ea3", "#e41a1c"]
+      }
+    },
+    "opacity": {
+      "condition": {"selection": "group_highlight", "value": 1},
+      "value": 0.2
+    },
+    "tooltip": [
+      {
+        "field": "Total_Immigration",
+        "type": "quantitative",
+        "title": "Immigration",
+        "format": ","
+      },
+      {"field": "Year", "title": "Year"}
+    ]
+  },
+  "config": {}
+}
