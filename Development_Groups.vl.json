@@ -22,7 +22,7 @@
     "x": {"field": "Year"},
     "color": {
       "field": "UN development group",
-      "scale": {"range": ["#675193", "#ca8861", "#33bbee"]}
+      "scale": {"range": ["#984ea3", "#009988", "#9e9e00"]}
     },
     "opacity": {
       "condition": {"selection": "group_highlight", "value": 1},
