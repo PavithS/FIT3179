@@ -56,7 +56,18 @@
         "color": {
           "field": "Immigration",
           "type": "quantitative",
-          "scale": {"type": "log"}
+          "scale": {
+            "type": "threshold",
+            "domain": [
+              10000,
+              100000,
+              250000,
+              500000,
+              1000000,
+              5000000,
+              15000000
+            ]
+          }
         },
         "tooltip": [
           {
