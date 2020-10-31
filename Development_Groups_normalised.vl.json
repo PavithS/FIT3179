@@ -19,7 +19,12 @@
       "title": "Immigration into UN development groups",
       "stack": "normalize"
     },
-    "x": {"field": "Year"},
+    "x": {
+      "field": "Year",
+      "labelAngle": -45,
+      "title": "Year",
+      "format": ""
+    },
     "color": {
       "field": "UN development group",
       "scale": {"range": ["#984ea3", "#009988", "#9e9e00"]}
