@@ -87,7 +87,7 @@
           {
             "field": "Immigration per Capita",
             "type": "quantitative",
-            "format": ","
+            "format": ".1f"
           },
           {"field": "Immigration", "type": "quantitative", "format": ","},
           {"field": "Population", "type": "quantitative", "format": ","}
