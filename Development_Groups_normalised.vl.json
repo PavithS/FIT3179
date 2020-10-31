@@ -22,9 +22,7 @@
     },
     "x": {
       "field": "Year",
-      "labelAngle": -45,
-      "title": "Year",
-      "format": ""
+      "axis": {"labelAngle": -45, "title": "Year", "format": ""}
     },
     "color": {
       "field": "UN development group",
