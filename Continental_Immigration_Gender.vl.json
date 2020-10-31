@@ -1,0 +1,90 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Gender of Immigrants by Continent",
+  "data": {
+    "url": "https://raw.githubusercontent.com/PavithS/FIT3179/main/Data/Continental_immigration_gender_long.csv"
+  },
+  "params": [
+    {
+      "name": "Year_select",
+      "value": "2019",
+      "bind": {
+        "input": "select",
+        "options": ["1990", "1995", "2000", "2005", "2010", "2015", "2019"],
+        "labels": ["1990", "1995", "2000", "2005", "2010", "2015", "2019"],
+        "name": "Year: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.Year == Year_select"},
+    {
+      "calculate": "if(datum.Gender === 'Female',-1,0) + if(datum.Gender === 'Male',1,0)",
+      "as": "q_order"
+    },
+    {
+      "calculate": "if(datum.Gender === 'Male', datum.Total_Immigration,0)",
+      "as": "signed_immigration"
+    },
+    {
+      "stack": "Total_Immigration",
+      "as": ["v1", "v2"],
+      "groupby": ["Continent"]
+    },
+    {
+      "joinaggregate": [
+        {"field": "signed_immigration", "op": "sum", "as": "offset"}
+      ],
+      "groupby": ["Continent"]
+    },
+    {"calculate": "datum.v1 - datum.offset", "as": "nx"},
+    {"calculate": "datum.v2 - datum.offset", "as": "nx2"}
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "nx",
+      "type": "quantitative",
+      "title": "Immigration",
+      "axis": {"format": ".1s"},
+      "scale": {"domain": [-45000000, 45000000]}
+    },
+    "x2": {"field": "nx2"},
+    "y": {
+      "field": "Continent",
+      "type": "nominal",
+      "title": "Continent",
+      "axis": {"offset": 5, "ticks": false, "minExtent": 60, "domain": false},
+      "scale": {
+        "domain": [
+          "Europe",
+          "Asia",
+          "Northern America",
+          "Africa",
+          "Latin America and the Caribbean",
+          "Oceania"
+        ]
+      }
+    },
+    "color": {
+      "field": "Gender",
+      "type": "nominal",
+      "title": "Gender",
+      "scale": {
+        "domain": ["Female", "Male"],
+        "range": ["#d6604d", "#4393c3"],
+        "type": "ordinal"
+      }
+    },
+    "tooltip": [
+      {"field": "Gender", "type": "nominal"},
+      {
+        "field": "Total_Immigration",
+        "type": "quantitative",
+        "title": "Immigration",
+        "format": ","
+      }
+    ]
+  },
+  "config": {}
+}
