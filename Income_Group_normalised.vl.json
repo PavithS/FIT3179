@@ -3,7 +3,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/PavithS/FIT3179/main/Data/World_Bank_Income_Groups.csv"
   },
-  "mark": "bar",
+  "mark": {"type": "bar", "cornerRadius": 0},
   "width": {"step": 30},
   "selection": {
     "group_highlight": {
