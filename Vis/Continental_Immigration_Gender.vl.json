@@ -53,7 +53,7 @@
     "y": {
       "field": "Continent",
       "type": "nominal",
-      "title": "Continent",
+      "title": null,
       "axis": {"offset": 5, "ticks": false, "minExtent": 60, "domain": false},
       "scale": {
         "domain": [
