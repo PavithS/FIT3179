@@ -23,7 +23,7 @@
         "y": {
           "field": "Total Immigration",
           "type": "quantitative",
-          "axis": {"format": ".2s"}
+          "axis": {"format": ".1s"}
         },
         "color": {
           "field": "Continent",
