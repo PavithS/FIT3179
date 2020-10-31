@@ -114,7 +114,12 @@
             "type": "nominal",
             "title": "Country"
           },
-          {"field": "Male Percent", "type": "quantitative", "title": "Male %" "format": ".1f"},
+          {
+            "field": "Male Percent",
+            "type": "quantitative",
+            "title": "Male %",
+            "format": ".1f"
+          },
           {
             "field": "Male_immigration",
             "type": "quantitative",
