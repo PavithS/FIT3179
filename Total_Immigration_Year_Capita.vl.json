@@ -76,7 +76,7 @@
         "color": {
           "field": "Immigration per Capita",
           "type": "quantitative",
-          "scale": {"type": "log", "domain": [1, 400]}
+          "scale": {"type": "log", "domain": [1, 500]}
         },
         "tooltip": [
           {
