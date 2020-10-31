@@ -91,6 +91,7 @@
         "color": {
           "field": "Male Percent",
           "type": "quantitative",
+          "legend": {"title": "Male %"},
           "scale": {
             "type": "threshold",
             "domain": [35, 45, 47.5, 50, 52.5, 55, 65, 75],
@@ -113,7 +114,7 @@
             "type": "nominal",
             "title": "Country"
           },
-          {"field": "Male Percent", "type": "quantitative", "format": ".1f"},
+          {"field": "Male Percent", "type": "quantitative", "title": "Male %" "format": ".1f"},
           {
             "field": "Male_immigration",
             "type": "quantitative",
