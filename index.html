@@ -20,18 +20,22 @@
 <h2>Gender of Immigrants</h2>
 <div id="vis3"></div>
   
-<h2>World Bank income groups (GNI per capita)</h2>
+<h2>Gender of Immigrants by Continent</h2>
 <div id="vis4"></div>
+  
+<h2>World Bank income groups (GNI per capita)</h2>
+<div id="vis5"></div>
  
 <h2>UN development groups</h2>
-<div id="vis5"></div>
+<div id="vis6"></div>
 
 <script type="text/javascript">
   var specVis1= "./Vis/Total_Immigration_Year_Capita.vl.json";
   var specVis2= "./Vis/Continental_Immigration.vl.json";
   var specVis3= "./Vis/Immigration_Gender_Ratio.vl.json";
-  var specVis4= "./Vis/Income_Group.vl.json";
-  var specVis5= "./Vis/Development_Groups_normalised.vl.json";
+  var specVis4= "./Vis/Continental_Immigration_Gender.vl.json";
+  var specVis5= "./Vis/Income_Group.vl.json";
+  var specVis6= "./Vis/Development_Groups_normalised.vl.json";
 
 
   vegaEmbed('#vis1', specVis1).then(function(result) {
@@ -51,6 +55,10 @@
   }).catch(console.error);
   
   vegaEmbed('#vis5', specVis5).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  vegaEmbed('#vis6', specVis6).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
