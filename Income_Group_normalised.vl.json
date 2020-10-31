@@ -19,7 +19,12 @@
       "title": "Immigration into World Bank Income groups",
       "stack": "normalize"
     },
-    "x": {"field": "Year"},
+    "x": {
+      "field": "Year",
+      "labelAngle": -45,
+      "title": "Year",
+      "format": ""
+    },
     "color": {
       "field": "World Bank Income Group",
       "scale": {
