@@ -17,7 +17,7 @@
       "aggregate": "sum",
       "field": "Total_Immigration",
       "title": "Immigration into UN development groups",
-      "axis": {"format": ".2s"}
+      "axis": {"format": ".1s"}
     },
     "x": {
       "field": "Year",
