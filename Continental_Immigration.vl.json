@@ -16,7 +16,8 @@
             "labelAngle": -45,
             "tickMinStep": 5,
             "title": "Year",
-            "tickCount": 7
+            "tickCount": 7,
+            "format": ""
           }
         },
         "y": {"field": "Total Immigration", "type": "quantitative"},
