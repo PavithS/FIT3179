@@ -118,7 +118,7 @@
             "field": "Male Percent",
             "type": "quantitative",
             "title": "Male %",
-            "format": ".1%"
+            "format": ".1f"
           },
           {
             "field": "Male_immigration",
