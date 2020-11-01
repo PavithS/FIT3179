@@ -3,7 +3,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/PavithS/FIT3179/main/Data/Continent_immigration.csv"
   },
-  "width": 300,
+  "width": 200,
   "height": 200,
   "title": "Immigration into each Continent by Year",
   "layer": [
