@@ -4,7 +4,7 @@
     "url": "https://raw.githubusercontent.com/PavithS/FIT3179/main/Data/World_Bank_Income_Groups.csv"
   },
   "mark": {"type": "bar", "cornerRadius": 0},
-  "height": 250,
+  "height": 255,
   "width": {"step": 30},
   "selection": {
     "group_highlight": {
