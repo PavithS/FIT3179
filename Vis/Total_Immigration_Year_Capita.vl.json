@@ -1,7 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": "Immigration per Capita into countries",
-  "width": 700,
   "height": 400,
   "params": [
     {
