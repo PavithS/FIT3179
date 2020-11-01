@@ -5,6 +5,7 @@
   },
   "title": "World Bank Income Groups (GNI per capita)",
   "mark": {"type": "bar", "cornerRadius": 0},
+  "height": 250,
   "width": {"step": 30},
   "selection": {
     "group_highlight": {
