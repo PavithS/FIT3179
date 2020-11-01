@@ -77,7 +77,7 @@
           "field": "Immigration per Capita",
           "type": "quantitative",
           "scale": {"type": "log", "domain": [1, 500]},
-          "title": null,
+          "title": null
         },
         "tooltip": [
           {
