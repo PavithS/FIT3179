@@ -17,7 +17,7 @@
     "y": {
       "aggregate": "sum",
       "field": "Total_Immigration",
-      "title": "Immigration into UN development groups",
+      "title": "Proportion of Global Immigration",
       "stack": "normalize"
     },
     "x": {
