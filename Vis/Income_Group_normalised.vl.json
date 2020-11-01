@@ -17,8 +17,7 @@
       "aggregate": "sum",
       "field": "Total_Immigration",
       "title": "Immigration into World Bank Income groups",
-      "stack": "normalize",
-      "axis": {"format": ".1s"}
+      "stack": "normalize"
     },
     "x": {
       "field": "Year",
