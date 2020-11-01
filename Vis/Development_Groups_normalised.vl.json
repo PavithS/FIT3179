@@ -38,7 +38,11 @@
         "type": "quantitative",
         "title": "Immigration",
         "format": ","
-      }
+      },
+      {
+        "field": "Year",
+        "type:" "quantitative",
+        "format": ""
     ]
   },
   "config": {}
