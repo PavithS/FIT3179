@@ -3,7 +3,6 @@
   "data": {
     "url": "https://raw.githubusercontent.com/PavithS/FIT3179/main/Data/Development_group_year.csv"
   },
-  "height": 250,
   "title": "UN Development Groups",
   "mark": {"type": "bar", "cornerRadius": 0},
   "width": {"step": 30},
