@@ -42,7 +42,7 @@
       },
       {
         "field": "Year",
-        "type:" "quantitative",
+        "type": "quantitative",
         "format": ""
       }
     ]
