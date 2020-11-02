@@ -82,8 +82,8 @@
           "calculate": "100*datum[Year_select + 'M']/datum[Year_select]",
           "as": "Male Percent"
         },
-        {"calculate": "datum[Year_select + 'M']", "as": "Male_immigration"},
-        {"calculate": "datum[Year_select + 'F']", "as": "Female_immigration"}
+        {"calculate": "datum[Year_select + 'M']", "as": "Male_immigrants"},
+        {"calculate": "datum[Year_select + 'F']", "as": "Female_immigrants"}
       ],
       "projection": {"type": "equirectangular"},
       "mark": {"type": "geoshape", "stroke": "white"},
@@ -121,15 +121,15 @@
             "format": ".2f"
           },
           {
-            "field": "Male_immigration",
+            "field": "Male_immigrants",
             "type": "quantitative",
-            "title": "Male Immigration",
+            "title": "Male Immigrants",
             "format": ","
           },
           {
-            "field": "Female_immigration",
+            "field": "Female_immigrants",
             "type": "quantitative",
-            "title": "Female Immigration",
+            "title": "Female Immigrants",
             "format": ","
           }
         ]
