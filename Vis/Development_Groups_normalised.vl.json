@@ -25,7 +25,8 @@
     },
     "color": {
       "field": "UN development group",
-      "scale": {"range": ["#984ea3", "#009988", "#9e9e00"]}
+      "scale": {"range": ["#984ea3", "#009988", "#9e9e00"]},
+      "title": "Development"
     },
     "opacity": {
       "condition": {"selection": "group_highlight", "value": 1},
