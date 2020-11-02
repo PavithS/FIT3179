@@ -34,6 +34,11 @@
     },
     "tooltip": [
       {
+        "field": "UN development group",
+        "type": "nominal",
+        "title": "Development group"
+      },
+      {
         "field": "Total_Immigration",
         "type": "quantitative",
         "title": "Immigration",
