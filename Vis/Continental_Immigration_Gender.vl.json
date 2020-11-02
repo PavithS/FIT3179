@@ -5,6 +5,7 @@
     "url": "https://raw.githubusercontent.com/PavithS/FIT3179/main/Data/Continental_immigration_gender_long.csv"
   },
   "height": 250,
+  "width": 250,
   "params": [
     {
       "name": "Year_select",
