@@ -5,7 +5,6 @@
   },
   "mark": {"type": "bar", "cornerRadius": 0},
   "height": 255,
-  "width": 225,
   "selection": {
     "group_highlight": {
       "type": "multi",
