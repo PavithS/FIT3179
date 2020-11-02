@@ -43,6 +43,11 @@
     },
     "tooltip": [
       {
+        "field": "World Bank Income Group",
+        "type": "nominal",
+        "title": "Income group"
+      },
+      {
         "field": "Total_Immigration",
         "type": "quantitative",
         "title": "Immigration",
