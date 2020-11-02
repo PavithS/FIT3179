@@ -34,7 +34,8 @@
           "No income group available"
         ],
         "range": ["#9e9e00", "#009988", "#33bbee", "#984ea3", "#e41a1c"]
-      }
+      },
+      "title": "Income Group"
     },
     "opacity": {
       "condition": {"selection": "group_highlight", "value": 1},
