@@ -27,11 +27,11 @@
       "field": "World Bank Income Group",
       "scale": {
         "domain": [
-          "High-income countries",
-          "Upper-middle-income countries",
-          "Lower-middle-income countries",
-          "Low-income countries",
-          "No income group available"
+          "High",
+          "Upper-middle",
+          "Lower-middle",
+          "Low",
+          "No group"
         ],
         "range": ["#9e9e00", "#009988", "#33bbee", "#984ea3", "#e41a1c"]
       },
