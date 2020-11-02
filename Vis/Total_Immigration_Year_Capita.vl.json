@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Immigration per Capita into countries",
+  "title": "Immigrants per Capita into countries",
   "height": 400,
   "width": 820,
   "params": [
@@ -63,7 +63,7 @@
             ]
           }
         },
-        {"calculate": "datum[Year_select]", "as": "Immigration"},
+        {"calculate": "datum[Year_select]", "as": "Immigrants"},
         {"calculate": "1000*datum['Pop' + Year_select]", "as": "Population"},
         {
           "calculate": "datum[Year_select]/datum['Pop' + Year_select]",
@@ -90,11 +90,11 @@
             "title": "Country"
           },
           {
-            "field": "Immigration per Capita",
+            "field": "Immigrants per Capita",
             "type": "quantitative",
             "format": ".1f"
           },
-          {"field": "Immigration", "type": "quantitative", "format": ","},
+          {"field": "Immigrants", "type": "quantitative", "format": ","},
           {"field": "Population", "type": "quantitative", "format": ","}
         ]
       }
