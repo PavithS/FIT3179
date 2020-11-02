@@ -4,7 +4,7 @@
     "url": "https://raw.githubusercontent.com/PavithS/FIT3179/main/Data/Continent_immigration.csv"
   },
   "height": 250,
-  "title": "Immigration into each Continent by Year",
+  "title": "Immigrants in each Continent by Year",
   "layer": [
     {
       "encoding": {
@@ -22,7 +22,8 @@
         "y": {
           "field": "Total Immigration",
           "type": "quantitative",
-          "axis": {"format": ".1s"}
+          "axis": {"format": ".1s"},
+          "title": "Immigrants"
         },
         "color": {
           "field": "Continent",
