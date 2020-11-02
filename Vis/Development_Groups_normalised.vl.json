@@ -4,7 +4,7 @@
     "url": "https://raw.githubusercontent.com/PavithS/FIT3179/main/Data/Development_group_year.csv"
   },
   "height": 250,
-  "width": 245,
+  "width": 250,
   "mark": {"type": "bar", "cornerRadius": 0},
   "selection": {
     "group_highlight": {
