@@ -50,7 +50,7 @@
       {
         "field": "Total_Immigration",
         "type": "quantitative",
-        "title": "Immigration",
+        "title": "Immigrants",
         "format": ","
       },
       {"field": "Year", "title": "Year"}
