@@ -67,14 +67,14 @@
         {"calculate": "1000*datum['Pop' + Year_select]", "as": "Population"},
         {
           "calculate": "datum[Year_select]/datum['Pop' + Year_select]",
-          "as": "Immigration per Capita"
+          "as": "Immigrants per Capita"
         }
       ],
       "projection": {"type": "equirectangular"},
       "mark": {"type": "geoshape", "stroke": "white"},
       "encoding": {
         "color": {
-          "field": "Immigration per Capita",
+          "field": "Immigrants per Capita",
           "type": "quantitative",
           "scale": {
             "type": "threshold", 
