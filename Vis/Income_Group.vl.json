@@ -16,7 +16,7 @@
     "y": {
       "aggregate": "sum",
       "field": "Total_Immigration",
-      "title": "Immigration",
+      "title": "Immigrants",
       "axis": {"format": ".1s"}
     },
     "x": {
