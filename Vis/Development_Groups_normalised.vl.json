@@ -3,6 +3,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/PavithS/FIT3179/main/Data/Development_group_year.csv"
   },
+  "title": "Development group of country",
   "height": 250,
   "mark": {"type": "bar", "cornerRadius": 0},
   "selection": {
